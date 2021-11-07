@@ -159,7 +159,7 @@ EventManager->Get("OnWeaponFired").GetDelegate().AddLambda([](UGameEvent& ev)
 
 ## Dynamic Events
 
-For the events that you'd like to listen to in Blueprints, you need to mark them as dynamic by checking "Is Dynamic?" property in the Event Table. If you also would like to listen to the events market with dynamic in C++, you need to make slight modifications:
+For the events that you'd like to listen to in Blueprints, you need to mark them as dynamic by checking "Is Dynamic?" property in the Event Table. If you also would like to listen to the events marked with dynamic in C++, you need to make slight modifications:
 
 ```cpp
 
