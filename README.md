@@ -6,6 +6,10 @@ Simple C++ Event Manager that is exposed to UE4 editor, meaning that one can def
 
 This is a simple event manager to use in your UE4 projects. Unlike most other event manager/system implementations, it focuses on the ability to create & edit events on Editor without re-compiling the source code for adding a new event or a new parameter. It uses TVariants for type checking and supports most of the basic types including numeric types, UObject, AActor and custom user structs.
 
+## Why?
+
+This is merely a hobby-project I've written in a day. One of the fastest ways to deliver events is just using multicast-delegates to hard-define the event types/arguments in C++ code, there is no doubt. However, I wondered if it would be possible to write a more flexible system one can edit through the editor without touching the C++ and came up with this.
+
 ## Usage Example
 
 User creates a data table in Editor, defining events along with their parameters.
@@ -25,10 +29,6 @@ manager->Get("OnPickupItem").Broadcast(FName("9mmAmmo"), 17);
 ```
 
 The events can only be fired in C++ (might change later), but can be listened in both C++ as well as Blueprints.
-
-## Why?
-
-This is merely a hobby-project I've written in a day. One of the fastest ways to deliver events is just using multicast-delegates to hard-define the event types/arguments in C++ code, there is no doubt. However, I wondered if it would be possible to write a more flexible system one can edit through the editor without touching the C++ and came up with this.
 
 ## Installation
 
