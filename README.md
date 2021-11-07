@@ -166,7 +166,7 @@ For the events that you'd like to listen to in Blueprints, you need to mark them
 // Instead of Get(), use GetDynamic, instead of a reference it returns a pointer.
 // Instead of GetDelegate(), use GetDynDelegate(), instead of a multicast delegate it returns a dynamic multicast delegate. 
 // Then you can fire or listen to events same way as non-dynamic events
-EventManager->GetDynamic("MyDynamicEvent")->GetDynDelegate().AddDynamic();
+EventManager->GetDynamic("MyDynamicEvent")->GetDynDelegate().AddDynamic(......);
 
 ```
 
