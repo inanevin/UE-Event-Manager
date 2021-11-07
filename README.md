@@ -1,4 +1,5 @@
-# UE-Event-Manager-EditorExposed
+# UE4 - Event Manager with Data Tables
+
 Simple C++ Event Manager that is exposed to UE4 editor, meaning that one can define events using DataTables within Editor instead of hard-coding them in C++.
 
 ## What?
