@@ -151,7 +151,7 @@ EventManager->Get("OnClimbSurface").GetDelegate().AddLambda([](UGameEvent& ev)
 // Use GetValue for a pointer type, then down-cast to target ptr.
 EventManager->Get("OnWeaponFired").GetDelegate().AddLambda([](UGameEvent& ev)
 {
-  AMyWeaponActor* actor = static_cast<AMyWeaponActor*>(ev.GetValue<Actor>("WeaponActor"));
+  AMyWeaponActor* actor = static_cast<AMyWeaponActor*>(ev.GetValue<AActor*>("WeaponActor"));
   EWeaponType weaponType = static_cast<EWeaponType>(ev.GetValue<uint8>("WeaponType"));
 });
 
