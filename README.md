@@ -23,7 +23,7 @@ manager->Get("OnPickupItem").Broadcast(FName("9mmAmmo"), 17);
 
 ```
 
-The events can only be fired in C++, but can be listened in both C++ as well as Blueprints.
+The events can only be fired in C++ (might change later), but can be listened in both C++ as well as Blueprints.
 
 ## Why?
 
