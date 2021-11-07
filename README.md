@@ -224,3 +224,7 @@ FBulletHitParameters params = *static_cast<FBulletHitParameters*>(EventManager->
 ```
 
 Unfortunately, this casting is not supported on blueprints.
+
+## Conclusion
+
+This event manager approach can increase your iteration times tremendously if you are working on a data-event based project, where you need to manage tens or hundreds of events. Of course, this perk comes with the down-side that the system won't be as performant as another system that directly declares the delegates in c++ code and uses them right away. However, as mentioned before, this was a simple hobby-project so feel free to contribute, comment, improve or simply destroy my design. All feedback are welcome, cheers!
