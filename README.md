@@ -167,15 +167,17 @@ For the events that you'd like to listen to in Blueprints, you need to mark them
 // Instead of Get(), use GetDynamic, instead of a reference it returns a pointer.
 // Instead of GetDelegate(), use GetDynDelegate(), instead of a multicast delegate it returns a dynamic multicast delegate. 
 // Then you can fire or listen to events same way as non-dynamic events
-EventManager->GetDynamic("MyDynamicEvent")->GetDynDelegate().AddDynamic(......);
+bool success = false;
+UGameEventDynamic* dyn = EventManager->GetDynamic("MyDynamicEvent", success);
+if(success)
+  dyn->GetDynDelegate().AddDynamic(......);
 
 ```
 
 To listen to events in blueprints, get a reference to the Event Manager, get a dynamic event by name, bind to it's delegate, then use GetInt(), GetFloat(), GetFVector() etc.
 functions to get a desired value by variable name.
 
-
-![image](https://user-images.githubusercontent.com/3519379/140648541-ca4d7a46-7742-404d-ac6a-8c0ac3b389d8.png)
+![image](https://user-images.githubusercontent.com/3519379/140650003-fbe69770-b8b9-4253-8d0d-766de14e2494.png)
 
 **Getting custom structs from the events are not supported for blueprints.**
 
