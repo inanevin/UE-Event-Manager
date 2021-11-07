@@ -90,19 +90,6 @@ void UGameEventManager::Setup()
 		}
 	}
 
-	UE_LOG(LogTemp, Warning, TEXT("%p"), this);
-
-	
-	Get("OnWeaponFired").GetDelegate().AddLambda([this](UGameEvent& ev)
-	{
-		UGameEventManager* sa = static_cast<UGameEventManager*>(ev.GetValue<UObject*>("GameEventManager"));
-		UE_LOG(LogTemp, Warning, TEXT("%p"), sa);
-	});
-
-	Get("OnPlayerLanded").Broadcast(251.0f);
-	Get("OnWeaponFired").Broadcast(static_cast<UObject*>(this));
-
-	
 }
 
 void UGameEventManager::Clear()
